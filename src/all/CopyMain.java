@@ -12,19 +12,23 @@ public class CopyMain
 	private static File textDestination;
 	private static File binarySource;
 	private static File binaryDestination;
+	private static File imageSource;
+	private static File imageDestination;
 	
 	public static void main(String[] args)
 	{
-		System.out.println("Start");
 		textSource = new File("C:/test/input.txt");
 		textDestination = new File("C:/test/output.txt");
 		binarySource = new File("C:/test/input.bin");
 		binaryDestination = new File("C:/test/output.bin");
+		imageSource = new File("C:/test/input.png");
+		imageDestination = new File("C:/test/output.png");
 		
 		try 
 		{
 			copy(textSource, textDestination);
 			copy(binarySource, binaryDestination);
+			copy(imageSource, imageDestination);
 		} 
 		catch (IOException e) 
 		{
